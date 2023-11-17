@@ -8,5 +8,4 @@ built on the requests library from python
 
 What might be added:
 
-Top crafts
-auction snipe watcher
+Top crafts and auction snipe watcher
