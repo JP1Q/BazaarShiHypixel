@@ -22,30 +22,33 @@ def Into():
 ##min_sell_volume_threshold = 1000  # Set your desired minimum sell volume threshold
 ##min_buy_volume_threshold = 1000   # Set your desired minimum buy volume threshold
 
+loop = True
 first_in = False
-loop = True 
-while loop == True:
+
+while loop:
     if not first_in:
         bzr.GetKey()
         threshold_percent, max_buy, min_buy, sell_entr, min_sell_vol, min_buy_volume = Into()
         data = bzr.getItems(threshold_percent, max_buy, min_buy, sell_entr, min_sell_vol, min_buy_volume)
         bzr.ShowData(data)
         first_in = True
+
     print()
     print("A> Refresh")
     print("B> Change Values")
     print("C> Change API key")
     print("Q> Quit")
     choice = input("> ")
-    if choice.lower == 'a':
+
+    if choice.lower() == 'a':
         bzr.Refresh()
         data = bzr.getItems(threshold_percent, max_buy, min_buy, sell_entr, min_sell_vol, min_buy_volume)
-    if choice.lower == 'b':
+    elif choice.lower() == 'b':
         threshold_percent, max_buy, min_buy, sell_entr, min_sell_vol, min_buy_volume = Into()
         data = bzr.getItems(threshold_percent, max_buy, min_buy, sell_entr, min_sell_vol, min_buy_volume)
-    if choice.lower == 'c':
+    elif choice.lower() == 'c':
         bzr.ChangeKey()
-    if choice.lower == 'q':
+    elif choice.lower() == 'q':
         loop = False
     else:
         bzr.ShowData(data)
