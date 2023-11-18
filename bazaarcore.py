@@ -2,6 +2,7 @@ import requests
 import os
 import pickle
 
+# Code below this line of code are the properity of Aroteo aka JP1Q, if you want to copy this work credit the original creator in your work!
 
 def SaveKeyToFile(key):
     with open('api_key.pkl', 'wb') as file:
@@ -132,14 +133,22 @@ def getItems(threshold_percent, max_buy_price_threshold, min_buy_price_threshold
     product_info_list.sort(key=lambda x: (x["percentage_difference"], x["sell_volume"], x["buy_volume"]), reverse=True)
     return product_info_list
 
+
+
+
+
+
 # ANSI color codes
 RESET = "\033[0m"
 BOLD = "\033[1m"
-RED = "\033[91m"
-GREEN = "\033[92m"
+RED = "\033[95m"   # Pinkish Red
+GREEN = "\033[38;5;213m"  # Light Pink (or you can choose a specific shade)
 YELLOW = "\033[93m"
-BLUE = "\033[94m"
+BLUE = "\033[38;5;141m"
 CYAN = "\033[96m"
+
+
+
 
 def ShowData(product_info_list):
     os.system('cls' if os.name == 'nt' else 'clear')

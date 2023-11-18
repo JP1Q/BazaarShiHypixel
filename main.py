@@ -1,6 +1,7 @@
 import bazaarcore as bzr
 
 
+
 def Into():
     print("Stuff in () is what to put in if you do not know what")
     print()
@@ -52,10 +53,3 @@ while loop:
         loop = False
     else:
         bzr.ShowData(data)
-
-    
-    
-
-
-
-
